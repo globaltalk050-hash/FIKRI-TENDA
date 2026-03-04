@@ -46,9 +46,7 @@
             "react": "https://esm.sh/react@18.2.0",
             "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
             "framer-motion": "https://esm.sh/framer-motion@11.0.8",
-            "lucide-react": "https://esm.sh/lucide-react@0.344.0",
-            "firebase/app": "https://esm.sh/firebase@10.8.0/app",
-            "firebase/analytics": "https://esm.sh/firebase@10.8.0/analytics"
+            "lucide-react": "https://esm.sh/lucide-react@0.344.0"
         }
     }
     </script>
@@ -70,23 +68,6 @@
             CheckCircle, Info, ShoppingCart, 
             Instagram, Facebook, MessageCircle 
         } from 'lucide-react';
-        import { initializeApp } from "firebase/app";
-        import { getAnalytics } from "firebase/analytics";
-
-        // --- FIREBASE CONFIGURATION ---
-        const firebaseConfig = {
-            apiKey: "AIzaSyA3R3Z2uEYO_kjoNfoh52eh02UyEG8LL_8",
-            authDomain: "fikri-tenda-a7037.firebaseapp.com",
-            projectId: "fikri-tenda-a7037",
-            storageBucket: "fikri-tenda-a7037.firebasestorage.app",
-            messagingSenderId: "22055937404",
-            appId: "1:22055937404:web:2d8ae940371609f69570f9",
-            measurementId: "G-CZQ144K3HD"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
 
         // --- COMPONENTS ---
 
