@@ -1,0 +1,56 @@
+{
+  "entities": {
+    "Service": {
+      "title": "Service",
+      "description": "Tenda and equipment rental services offered by Fikri Tenda.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "price": { "type": "string" },
+        "image": { "type": "string" },
+        "category": { "type": "string" }
+      },
+      "required": ["title", "description", "price", "image"]
+    },
+    "GalleryItem": {
+      "title": "Gallery Item",
+      "description": "Photos of past events and tent setups.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "title": { "type": "string" },
+        "category": { "type": "string" }
+      },
+      "required": ["imageUrl", "title"]
+    },
+    "ContactRequest": {
+      "title": "Contact Request",
+      "description": "Inquiries from potential customers.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "message": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "phone", "message", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/services/{serviceId}": {
+      "schema": "Service",
+      "description": "Collection of rental services."
+    },
+    "/gallery/{itemId}": {
+      "schema": "GalleryItem",
+      "description": "Collection of gallery photos."
+    },
+    "/contact_requests/{requestId}": {
+      "schema": "ContactRequest",
+      "description": "Collection of customer inquiries."
+    }
+  }
+}
